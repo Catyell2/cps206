@@ -1,5 +1,6 @@
 package edu.jalc.inclass.cocacola.recipe.store;
 
+import edu.jalc.inclass.cocacola.employee;
 
 
 /*
@@ -13,4 +14,27 @@ package edu.jalc.inclass.cocacola.recipe.store;
 		match, throw an exception.
  */
 public class SecretRecipeStore {
+
+    private static SecretRecipeStore secretRecipeStore;
+
+    private HashMap<Recipe,PinNumber> secretRecipes;
+
+
+    public static SecretRecipeStore getInstance(){
+      if (secretRecipes == null) secretRecipes= new SecretRecipeStore();
+
+      secretRecipeStore = new HashMap<>();
+      return secretRecipeStore;
+    }
+
+
+    public void addRecipe(String name, Employee employee){
+
+    }
+
+    public void getRecipe(){
+
+
+    }
+
 }
