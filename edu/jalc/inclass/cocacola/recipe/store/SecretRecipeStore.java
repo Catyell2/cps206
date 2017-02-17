@@ -1,7 +1,7 @@
 package edu.jalc.inclass.cocacola.recipe.store;
 
 import edu.jalc.inclass.cocacola.employee;
-
+import edu.jalc.inclass.cocacola.recipe;
 
 /*
 
@@ -15,24 +15,26 @@ import edu.jalc.inclass.cocacola.employee;
  */
 public class SecretRecipeStore {
 
-    private static SecretRecipeStore secretRecipeStore;
+    private static SecretRecipeStore secretRecipeStore = null;
 
     private HashMap<Recipe,PinNumber> secretRecipes;
 
 
     public static SecretRecipeStore getInstance(){
       if (secretRecipes == null) secretRecipes= new SecretRecipeStore();
-
       secretRecipeStore = new HashMap<>();
       return secretRecipeStore;
     }
 
-
-    public void addRecipe(String name, Employee employee){
-
+    public void addRecipe(Recipe recipe, Employee employee){
+      secretRecipeStore.put(recipe, employee.getPinNumber());
+      return this;
     }
 
-    public void getRecipe(){
+    public void getRecipe(String name, Employee employee){
+      for (Recipe recipe:secretRecipes.keySet()){
+        if Recipe name = this.name();
+      }
 
 
     }
